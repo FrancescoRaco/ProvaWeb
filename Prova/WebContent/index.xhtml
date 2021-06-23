@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+<h:head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <title>Prova</title>
+
+	<!-- Bootstrap import -->
+    <h:outputStylesheet name="bootstrap/css/bootstrap.min.css"/>
+    <h:outputScript name="bootstrap/js/jquery-3.2.1.slim.min.js"/>
+    <h:outputScript name="bootstrap/js/popper.min.js"/>
+    
+	<!-- Theme -->
+	<h:outputStylesheet name="theme/app.css"/>
+    
+</h:head>
+
+<h:body>
+	<h:form>
+		<h:panelGroup layout="block" styleClass="form-group ml-3">
+			<div class="row">
+				<div class="col-12 text-center">
+					<em>Form di esempio</em>
+				</div>
+			</div>
+			<br/>
+			<div class="row">
+				<div class="col-sm-6">
+					<h:outputLabel for="matricolaId" value="Matricola" styleClass="control-label"/>
+					<h:inputText value="#{provaBean.matricola}" styleClass="form-control" id="matricolaId"/>
+				</div>
+			</div>
+			<br/>
+			<div class="row">
+				<div class="col-12">
+					<h:commandButton value="Submit" action="#{provaController.ottieniNome()}" styleClass="btn btn-primary"/>
+				</div>
+			</div>
+			<br/>
+			<div class="row">
+				<div class="col-12">
+					<h:outputText value="#{provaBean.studente}"/>
+				</div>
+			</div>
+		</h:panelGroup>
+	</h:form>
+</h:body>
+
+</html>
